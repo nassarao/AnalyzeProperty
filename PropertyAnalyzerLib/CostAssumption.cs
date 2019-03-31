@@ -20,7 +20,7 @@ namespace PropertyAnalyzerLib
             this.DownPayment = downPayment;
             this.Improvements = improvements;
             this.ClosingCosts = closingCosts;
-            this.TotalCost = PurchasePrice + DownPayment + Improvements + ClosingCosts;
+            this.TotalCost = PurchasePrice  + Improvements + ClosingCosts;
             this.CashOutaly = DownPayment + Improvements + ClosingCosts;
 
         }
