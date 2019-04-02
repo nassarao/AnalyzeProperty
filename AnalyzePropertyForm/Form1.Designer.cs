@@ -95,15 +95,20 @@
             this.btnAnalyze = new System.Windows.Forms.Button();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox7 = new System.Windows.Forms.GroupBox();
-            this.lblNOI = new System.Windows.Forms.Label();
-            this.lblEquity = new System.Windows.Forms.Label();
-            this.lblCashFlow = new System.Windows.Forms.Label();
-            this.lblCAPRate = new System.Windows.Forms.Label();
-            this.lblCOCRate = new System.Windows.Forms.Label();
             this.lblROI = new System.Windows.Forms.Label();
+            this.lblCOCRate = new System.Windows.Forms.Label();
+            this.lblCAPRate = new System.Windows.Forms.Label();
+            this.lblCashFlow = new System.Windows.Forms.Label();
+            this.lblEquity = new System.Windows.Forms.Label();
+            this.lblNOI = new System.Windows.Forms.Label();
             this.btnUpFive = new System.Windows.Forms.Button();
             this.btnDownFive = new System.Windows.Forms.Button();
             this.btnSave = new System.Windows.Forms.Button();
+            this.lblMonthlyPMI = new System.Windows.Forms.Label();
+            this.txtPMIRate = new System.Windows.Forms.TextBox();
+            this.label24 = new System.Windows.Forms.Label();
+            this.lblYearlyMortgage = new System.Windows.Forms.Label();
+            this.lblYearlyPMI = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox3.SuspendLayout();
@@ -328,6 +333,11 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.Controls.Add(this.lblYearlyPMI);
+            this.groupBox3.Controls.Add(this.lblYearlyMortgage);
+            this.groupBox3.Controls.Add(this.txtPMIRate);
+            this.groupBox3.Controls.Add(this.label24);
+            this.groupBox3.Controls.Add(this.lblMonthlyPMI);
             this.groupBox3.Controls.Add(this.lblMonthlyMortgage);
             this.groupBox3.Controls.Add(this.txtMortgaageLength);
             this.groupBox3.Controls.Add(this.label4);
@@ -347,7 +357,7 @@
             // lblMonthlyMortgage
             // 
             this.lblMonthlyMortgage.AutoSize = true;
-            this.lblMonthlyMortgage.Location = new System.Drawing.Point(12, 150);
+            this.lblMonthlyMortgage.Location = new System.Drawing.Point(12, 166);
             this.lblMonthlyMortgage.Name = "lblMonthlyMortgage";
             this.lblMonthlyMortgage.Size = new System.Drawing.Size(95, 13);
             this.lblMonthlyMortgage.TabIndex = 23;
@@ -600,7 +610,7 @@
             // lblMonthlyExpenses
             // 
             this.lblMonthlyExpenses.AutoSize = true;
-            this.lblMonthlyExpenses.Location = new System.Drawing.Point(298, 122);
+            this.lblMonthlyExpenses.Location = new System.Drawing.Point(307, 119);
             this.lblMonthlyExpenses.Name = "lblMonthlyExpenses";
             this.lblMonthlyExpenses.Size = new System.Drawing.Size(96, 13);
             this.lblMonthlyExpenses.TabIndex = 23;
@@ -750,41 +760,14 @@
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Analysis";
             // 
-            // lblNOI
+            // lblROI
             // 
-            this.lblNOI.AutoSize = true;
-            this.lblNOI.Location = new System.Drawing.Point(6, 36);
-            this.lblNOI.Name = "lblNOI";
-            this.lblNOI.Size = new System.Drawing.Size(29, 13);
-            this.lblNOI.TabIndex = 0;
-            this.lblNOI.Text = "NOI:";
-            // 
-            // lblEquity
-            // 
-            this.lblEquity.AutoSize = true;
-            this.lblEquity.Location = new System.Drawing.Point(134, 36);
-            this.lblEquity.Name = "lblEquity";
-            this.lblEquity.Size = new System.Drawing.Size(71, 13);
-            this.lblEquity.TabIndex = 1;
-            this.lblEquity.Text = "Equity 1 year:";
-            // 
-            // lblCashFlow
-            // 
-            this.lblCashFlow.AutoSize = true;
-            this.lblCashFlow.Location = new System.Drawing.Point(6, 66);
-            this.lblCashFlow.Name = "lblCashFlow";
-            this.lblCashFlow.Size = new System.Drawing.Size(59, 13);
-            this.lblCashFlow.TabIndex = 2;
-            this.lblCashFlow.Text = "Cash Flow:";
-            // 
-            // lblCAPRate
-            // 
-            this.lblCAPRate.AutoSize = true;
-            this.lblCAPRate.Location = new System.Drawing.Point(6, 96);
-            this.lblCAPRate.Name = "lblCAPRate";
-            this.lblCAPRate.Size = new System.Drawing.Size(57, 13);
-            this.lblCAPRate.TabIndex = 3;
-            this.lblCAPRate.Text = "CAP Rate:";
+            this.lblROI.AutoSize = true;
+            this.lblROI.Location = new System.Drawing.Point(134, 66);
+            this.lblROI.Name = "lblROI";
+            this.lblROI.Size = new System.Drawing.Size(56, 13);
+            this.lblROI.TabIndex = 5;
+            this.lblROI.Text = "Total ROI:";
             // 
             // lblCOCRate
             // 
@@ -795,14 +778,41 @@
             this.lblCOCRate.TabIndex = 4;
             this.lblCOCRate.Text = "COC Rate:";
             // 
-            // lblROI
+            // lblCAPRate
             // 
-            this.lblROI.AutoSize = true;
-            this.lblROI.Location = new System.Drawing.Point(134, 66);
-            this.lblROI.Name = "lblROI";
-            this.lblROI.Size = new System.Drawing.Size(56, 13);
-            this.lblROI.TabIndex = 5;
-            this.lblROI.Text = "Total ROI:";
+            this.lblCAPRate.AutoSize = true;
+            this.lblCAPRate.Location = new System.Drawing.Point(6, 96);
+            this.lblCAPRate.Name = "lblCAPRate";
+            this.lblCAPRate.Size = new System.Drawing.Size(57, 13);
+            this.lblCAPRate.TabIndex = 3;
+            this.lblCAPRate.Text = "CAP Rate:";
+            // 
+            // lblCashFlow
+            // 
+            this.lblCashFlow.AutoSize = true;
+            this.lblCashFlow.Location = new System.Drawing.Point(6, 66);
+            this.lblCashFlow.Name = "lblCashFlow";
+            this.lblCashFlow.Size = new System.Drawing.Size(59, 13);
+            this.lblCashFlow.TabIndex = 2;
+            this.lblCashFlow.Text = "Cash Flow:";
+            // 
+            // lblEquity
+            // 
+            this.lblEquity.AutoSize = true;
+            this.lblEquity.Location = new System.Drawing.Point(134, 36);
+            this.lblEquity.Name = "lblEquity";
+            this.lblEquity.Size = new System.Drawing.Size(71, 13);
+            this.lblEquity.TabIndex = 1;
+            this.lblEquity.Text = "Equity 1 year:";
+            // 
+            // lblNOI
+            // 
+            this.lblNOI.AutoSize = true;
+            this.lblNOI.Location = new System.Drawing.Point(6, 36);
+            this.lblNOI.Name = "lblNOI";
+            this.lblNOI.Size = new System.Drawing.Size(29, 13);
+            this.lblNOI.TabIndex = 0;
+            this.lblNOI.Text = "NOI:";
             // 
             // btnUpFive
             // 
@@ -833,6 +843,50 @@
             this.btnSave.Text = "Save Analysis";
             this.btnSave.UseVisualStyleBackColor = true;
             this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
+            // 
+            // lblMonthlyPMI
+            // 
+            this.lblMonthlyPMI.AutoSize = true;
+            this.lblMonthlyPMI.Location = new System.Drawing.Point(12, 195);
+            this.lblMonthlyPMI.Name = "lblMonthlyPMI";
+            this.lblMonthlyPMI.Size = new System.Drawing.Size(69, 13);
+            this.lblMonthlyPMI.TabIndex = 24;
+            this.lblMonthlyPMI.Text = "Monthly PMI:";
+            // 
+            // txtPMIRate
+            // 
+            this.txtPMIRate.Location = new System.Drawing.Point(152, 137);
+            this.txtPMIRate.Name = "txtPMIRate";
+            this.txtPMIRate.Size = new System.Drawing.Size(137, 20);
+            this.txtPMIRate.TabIndex = 25;
+            this.txtPMIRate.Text = "0.0085";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Location = new System.Drawing.Point(12, 140);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(55, 13);
+            this.label24.TabIndex = 26;
+            this.label24.Text = "PMI Rate:";
+            // 
+            // lblYearlyMortgage
+            // 
+            this.lblYearlyMortgage.AutoSize = true;
+            this.lblYearlyMortgage.Location = new System.Drawing.Point(149, 166);
+            this.lblYearlyMortgage.Name = "lblYearlyMortgage";
+            this.lblYearlyMortgage.Size = new System.Drawing.Size(87, 13);
+            this.lblYearlyMortgage.TabIndex = 27;
+            this.lblYearlyMortgage.Text = "Yearly Mortgage:";
+            // 
+            // lblYearlyPMI
+            // 
+            this.lblYearlyPMI.AutoSize = true;
+            this.lblYearlyPMI.Location = new System.Drawing.Point(150, 195);
+            this.lblYearlyPMI.Name = "lblYearlyPMI";
+            this.lblYearlyPMI.Size = new System.Drawing.Size(61, 13);
+            this.lblYearlyPMI.TabIndex = 28;
+            this.lblYearlyPMI.Text = "Yearly PMI:";
             // 
             // Form1
             // 
@@ -949,6 +1003,11 @@
         private System.Windows.Forms.Button btnUpFive;
         private System.Windows.Forms.Button btnDownFive;
         private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Label lblMonthlyPMI;
+        private System.Windows.Forms.TextBox txtPMIRate;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label lblYearlyPMI;
+        private System.Windows.Forms.Label lblYearlyMortgage;
     }
 }
 

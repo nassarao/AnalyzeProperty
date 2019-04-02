@@ -18,7 +18,7 @@ namespace PropertyAnalyzerLib
         public Logger(Property property)
         {
 
-            DirectoryLocation = @"C:\Users\Ahmad.Nassar.ROUNDTOWER\Documents\Real_Estate\" + property.Address.State + "\\" +
+            DirectoryLocation = @"C:\Real_Estate\" + property.Address.State + "\\" +
                 property.Address.City + "\\" + property.Address.StreetNumber + "_" + property.Address.StreetName;
 
 

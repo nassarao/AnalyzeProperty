@@ -48,7 +48,7 @@ namespace PropertyAnalyzerLib
 
         public double CalcCashFlow()
         {
-            CashFlow = NOI - FA.MonthlyPayment * 12;
+            CashFlow = NOI - (FA.MonthlyPayment * 12) - FA.YearlyPMI;
             return CashFlow;
         }
 
